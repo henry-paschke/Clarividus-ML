@@ -1,8 +1,8 @@
 import torchvision, torch
-from ..utils import Config
-from .dataset import Dataset, DatasetName
-from .transforms import get_trainset_transforms, get_testset_transforms
-from .dataset_registry import register_dataset
+from ...utils import Config
+from ..dataset import Dataset, DatasetName
+from ..transforms import get_trainset_transforms, get_testset_transforms
+from ..dataset_registry import register_dataset
 
 
 @register_dataset(DatasetName.CIFAR10)
