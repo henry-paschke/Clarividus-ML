@@ -1,5 +1,5 @@
 import torchvision.transforms as transforms
-from utils import Config
+from ..utils import Config
 
 
 def get_base_transforms():
@@ -44,13 +44,15 @@ def get_augmentation_transforms(config: Config):
     return augmentations
 
 
-def get_trainset_transforms():
+def get_trainset_transforms(config: Config):
     """
     Returns the train transforms for the dataset to be run during loading
 
     :return: A list of transforms to be applied to the dataset
     """
-    return transforms.Compose(get_augmentation_transforms() + get_base_transforms())
+    return transforms.Compose(
+        get_augmentation_transforms(config) + get_base_transforms()
+    )
 
 
 def get_testset_transforms():

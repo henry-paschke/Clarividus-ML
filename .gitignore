@@ -1,6 +1,12 @@
 # Ignore Python cache files and directories
 __pycache__/*
+*.pyc
 
 
 # Ignore virtual environment directories
 .venv/
+
+*.egg-info/
+# Ignore Jupyter Notebook checkpoints
+
+notebooks/data/*

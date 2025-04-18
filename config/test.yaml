@@ -1,0 +1,16 @@
+dataset:
+  name: CIFAR10  # DatasetName.CIFAR10 (default)
+  data_split:
+    - 0.8
+    - 0.1
+    - 0.1
+  batch_size: 32
+  num_workers: 4
+
+augmentation:
+  flip: false
+  padding: 0
+  brightness: 0.0
+  contrast: 0.0
+  saturation: 0.0
+  hue: 0.0
